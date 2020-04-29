@@ -27,6 +27,34 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+
+    {
+      // The name of the plugin
+      resolve: 'gatsby-source-mongodb',
+      options: {
+          // connectionString: 'mongodb+srv://TTK:c0WjEcdEqgKJwUjf@cluster0-gss7h.mongodb.net/test',
+          // Name of the database and collection
+          dbName: 'ttk',
+          collection: ['WeaponInfo', 'AgentInfo'],
+          server: {
+              address: 'cluster0-shard-00-01-gss7h.mongodb.net',
+              port: 27017
+          },
+          auth: {
+              user: 'TTK',
+              password: 'c0WjEcdEqgKJwUjf'
+          },
+          extraParams: {
+              replicaSet: 'Cluster0-shard-0',
+              ssl: true,
+              authSource: 'admin',
+              retryWrites: true
+              // w: 'majority',
+              // readPreference: 'primary'
+          }
+      }
+    },
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

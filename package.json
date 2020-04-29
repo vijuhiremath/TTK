@@ -13,6 +13,7 @@
     "gatsby-plugin-react-helmet": "^3.2.5",
     "gatsby-plugin-sharp": "^2.5.7",
     "gatsby-source-filesystem": "^2.2.5",
+    "gatsby-source-mongodb": "^2.3.0",
     "gatsby-transformer-sharp": "^2.4.7",
     "gh-pages": "^2.2.0",
     "prop-types": "^15.7.2",
