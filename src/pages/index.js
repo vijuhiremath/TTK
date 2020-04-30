@@ -1,21 +1,64 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Navigation from "../components/Navigation.js"
+import Home from "../components/Home.js"
+import Agents from "../components/Agents.js"
+import Footer from "../components/Footer.js"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+class App extends React.Component {
 
-export default IndexPage
+  constructor(props) {
+    super(props);
+    this.state = {
+      page: "home"
+    };
+
+    this.switchToAgents=this.switchToAgents.bind(this);
+    this.switchToHome=this.switchToHome.bind(this);
+  }
+
+  switchToHome() {
+    this.setState({
+      page: "home"
+    });
+  }
+
+  switchToAgents() {
+    this.setState({
+      page: "agents"
+    });
+  }
+
+  render () {
+
+    if (this.state.page==="home") {
+      return (
+        <div>
+          <Navigation 
+            page={this.state.page} 
+            switchToAgents={this.switchToAgents}
+            switchToHome={this.switchToHome}/>
+          <Home/>
+          <Footer page={this.state.page}/>
+        </div>
+      );
+    }
+
+    if (this.state.page==="agents") {
+      return (
+        <div>
+          <Navigation 
+            page={this.state.page} 
+            switchToAgents={this.switchToAgents}
+            switchToHome={this.switchToHome}/>
+          <Agents/>
+          <Footer page={this.state.page}/>
+        </div>
+      );
+    }
+    
+  }
+
+}
+
+export default App;
