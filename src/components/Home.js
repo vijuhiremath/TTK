@@ -7,6 +7,10 @@ import { withStyles } from "@material-ui/core/styles";
 import HomeBackground from "../images/home_background.jpg";
 import Logo from "../images/logo_square.png";
 
+require('react-dom');
+window.React2 = require('react');
+console.log(window.React1 === window.React2);
+
 const styles = theme => ({
 
   big_div: {
