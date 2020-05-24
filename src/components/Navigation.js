@@ -4,6 +4,7 @@ import {TextField, InputAdornment} from '@material-ui/core';
 import {Search} from '@material-ui/icons';
 import {withStyles} from "@material-ui/core/styles";
 import Logo from "../images/logo_square.png";
+import {navigate} from 'gatsby';
 
 const styles = {
     
@@ -20,7 +21,8 @@ const styles = {
 
     homebtn: {
         height: 60, 
-        minWidth: 60
+        minWidth: 60,
+        
     },
 
     textField: {
@@ -43,6 +45,14 @@ const styles = {
 };
 
 class Navigation extends React.Component {
+
+    homePage(index) {
+        navigate('/'); //navigate to edit page
+    }
+
+    agentsPage(index) {
+        navigate('/agents'); //navigate to edit page
+    }
     
     render(props) {
         const { classes } = this.props;
@@ -53,11 +63,12 @@ class Navigation extends React.Component {
                 <div className={classes.navBar}>
                     <AppBar position="static" className={classes.navBar}>
                         <Toolbar>
-                            <Button className={classes.homebtn} onClick={this.props.switchToHome}>
+                            <Button className={classes.homebtn} onClick={() => this.homePage()}>
                                 <img src={Logo} alt="Home" height="45"/>
                             </Button>
+
                             <div style={{width: "100%", paddingRight: "5%"}}>
-                                <Button className={classes.btn} onClick={this.props.switchToAgents}>AGENTS</Button>
+                                <Button className={classes.btn} onClick={() => this.agentsPage()}>AGENTS</Button>
                                 <Button className={classes.btn} >WEAPONS</Button>
                                 <Button className={classes.btn} >MAPS</Button>
                                 <Button className={classes.btn} >COACHING TOOL</Button>
@@ -72,11 +83,11 @@ class Navigation extends React.Component {
             <div className={classes.navBar}>
                 <AppBar position="static" className={classes.navBar}>
                     <Toolbar>
-                        <Button className={classes.homebtn} onClick={this.props.switchToHome}>
+                        <Button className={classes.homebtn} onClick={() => this.homePage()}>
                             <img src={Logo} alt="Home" height="45"/>
                         </Button>
                         <div style={{width: "100%", paddingRight: "5%"}}>
-                            <Button className={classes.btn} >AGENTS</Button>
+                            <Button className={classes.btn} onClick={() => this.agentsPage()}>AGENTS</Button>
                             <Button className={classes.btn} >WEAPONS</Button>
                             <Button className={classes.btn} >MAPS</Button>
                             <Button className={classes.btn} >COACHING TOOL</Button>
