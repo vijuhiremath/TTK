@@ -10,6 +10,10 @@ const styles = {
         marginTop: 50
     },
 
+    agentsIcons: {
+        width: "40%",
+    },
+
     icon: {
         width: 120,
         height: 120,
@@ -119,7 +123,7 @@ class Agents extends React.Component {
                 </Typography>
 
                 <Box display="flex" justifyContent="center" m={10} p={1}>
-                    <div>
+                    <div className={classes.agentsIcons}>
                         {this.images.map(
                             (image, index) =>   
                                 <Typography className={classes.icon} key={index} >
