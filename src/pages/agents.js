@@ -11,9 +11,6 @@ class AgentsPage extends React.Component {
         this.state = {
             page: "agents"
         };
-
-        // this.switchToAgents=this.switchToAgents.bind(this);
-        // this.switchToHome=this.switchToHome.bind(this);
     }
 
     render () {

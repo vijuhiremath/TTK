@@ -11,9 +11,6 @@ class App extends React.Component {
     this.state = {
       page: "home"
     };
-
-    // this.switchToAgents=this.switchToAgents.bind(this);
-    // this.switchToHome=this.switchToHome.bind(this);
   }
 
   render () {

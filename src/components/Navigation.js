@@ -1,6 +1,5 @@
 import React from 'react';
-import {AppBar, Toolbar, Button} from '@material-ui/core';
-import {TextField, InputAdornment} from '@material-ui/core';
+import {AppBar, Toolbar, Button, TextField, InputAdornment} from '@material-ui/core';
 import {Search} from '@material-ui/icons';
 import {withStyles} from "@material-ui/core/styles";
 import Logo from "../images/logo_square.png";
@@ -21,8 +20,7 @@ const styles = {
 
     homebtn: {
         height: 60, 
-        minWidth: 60,
-        
+        minWidth: 60,     
     },
 
     textField: {

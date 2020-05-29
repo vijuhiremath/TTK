@@ -63,7 +63,7 @@ class Footer extends React.Component {
                     trademarks or registered trademarks of Riot Games, Inc. VALORANT © Riot Games, Inc.
                 </Typography>
 
-                <Typography className={classes.typ1}>
+                <div className={classes.typ1}>
                     <Link className={classes.links} href="#" color="inherit">
                         Contact
                     </Link>
@@ -75,7 +75,7 @@ class Footer extends React.Component {
                     <Link className={classes.links} href="#" color="inherit">
                         Privacy Policy
                     </Link>
-                </Typography>
+                </div>
 
                 <Typography className={classes.icon}>
                     <IconButton aria-label="discord" component="span" 
