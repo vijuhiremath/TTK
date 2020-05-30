@@ -25,6 +25,7 @@ const styles = {
 
     tableDiv: {
         margin: "5%",
+        minHeight: "90%",
         border: "1px solid #ddd",
     },
 
@@ -77,11 +78,11 @@ class Agents extends React.Component {
             {agent: 'Jett', pickRate: '50%', ability1: 10, ability2: 2, ability3: 4 },
             {agent: 'Viper', pickRate: '30%', ability1: 10, ability2: 2, ability3: 4 },
             {agent: 'Raze', pickRate: '70%', ability1: 10, ability2: 2, ability3: 4 },
-            {agent: 'Brimstone', pickRate: '60%', ability1: 10, ability2: 2, ability3: 4 },
-            {agent: 'Breach', pickRate: '50%', ability1: 10, ability2: 2, ability3: 4 },
-            {agent: 'Omen', pickRate: '50%', ability1: 10, ability2: 2, ability3: 4 },
-            {agent: 'Sage', pickRate: '30%', ability1: 10, ability2: 2, ability3: 4 },
-            {agent: 'Sova', pickRate: '70%', ability1: 10, ability2: 2, ability3: 4 },
+            // {agent: 'Brimstone', pickRate: '60%', ability1: 10, ability2: 2, ability3: 4 },
+            // {agent: 'Breach', pickRate: '50%', ability1: 10, ability2: 2, ability3: 4 },
+            // {agent: 'Omen', pickRate: '50%', ability1: 10, ability2: 2, ability3: 4 },
+            // {agent: 'Sage', pickRate: '30%', ability1: 10, ability2: 2, ability3: 4 },
+            // {agent: 'Sova', pickRate: '70%', ability1: 10, ability2: 2, ability3: 4 },
         ];
     }
 
