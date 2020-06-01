@@ -40,6 +40,15 @@ const styles = {
         borderWidth: '1px',
         borderColor: '#101823 !important'
     },
+
+    img: {
+        userDrag: "none",
+        userSelect: "none",
+        MozUserSelect:"none",
+        WebkitUserDrag: "none",
+        WebkitUserSelect:"none",
+        msUserSelect:"none",
+      },
 };
 
 class Navigation extends React.Component {
@@ -62,7 +71,7 @@ class Navigation extends React.Component {
                     <AppBar position="static" className={classes.navBar}>
                         <Toolbar>
                             <Button className={classes.homebtn} onClick={() => this.homePage()}>
-                                <img src={Logo} alt="Home" height="45"/>
+                                <img src={Logo} alt="Home" height="45" className={classes.img}/>
                             </Button>
 
                             <div style={{width: "100%", paddingRight: "5%"}}>
@@ -82,7 +91,7 @@ class Navigation extends React.Component {
                 <AppBar position="static" className={classes.navBar}>
                     <Toolbar>
                         <Button className={classes.homebtn} onClick={() => this.homePage()}>
-                            <img src={Logo} alt="Home" height="45"/>
+                            <img src={Logo} alt="Home" height="45" className={classes.img}/>
                         </Button>
                         <div style={{width: "100%", paddingRight: "5%"}}>
                             <Button className={classes.btn} onClick={() => this.agentsPage()}>AGENTS</Button>

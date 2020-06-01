@@ -54,6 +54,19 @@ const styles = {
         borderColor: "white",
         border: "1px solid #ddd",
     },
+
+    img: {
+        userDrag: "none",
+        userSelect: "none",
+        MozUserSelect:"none",
+        WebkitUserDrag: "none",
+        WebkitUserSelect:"none",
+        msUserSelect:"none",
+        // -moz-user-select: none,
+        // -webkit-user-drag: none,
+        // -webkit-user-select: none,
+        // -ms-user-select: none,
+      },
 };
 
 
@@ -138,7 +151,7 @@ class Agents extends React.Component {
                                         >
                                         <img 
                                             title={this.images[index].slice(this.getPosition(this.images[index], "/", "2")+1, this.images[index].indexOf("_"))} 
-                                            src={image} alt="info">
+                                            src={image} alt="info" className={classes.img}>
                                         </img>
                                         
                                     </IconButton>

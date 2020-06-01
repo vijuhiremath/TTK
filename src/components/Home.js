@@ -63,6 +63,15 @@ const styles = theme => ({
     }
   },
 
+  img: {
+    userDrag: "none",
+    userSelect: "none",
+    MozUserSelect:"none",
+    WebkitUserDrag: "none",
+    WebkitUserSelect:"none",
+    msUserSelect:"none",
+  },
+
 });
 
 class Home extends React.Component {
@@ -75,7 +84,7 @@ class Home extends React.Component {
       <center>
         <div className={classes.big_div}>
             <div className={classes.small_div}>
-              <img src={Logo} alt="Home" width="10%"/>
+              <img src={Logo} alt="Home" width="10%" className={classes.img}/>
               <br></br>
 
               <Typography component={'span'}>
