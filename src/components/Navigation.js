@@ -15,12 +15,14 @@ const styles = {
 
     btn: {
         width: "25%",
-        color: "#101823"
+        color: "#101823",
+        alignItems: "center",
     },
 
     homebtn: {
         height: 60, 
-        minWidth: 60,     
+        minWidth: 60,
+        padding: 0,
     },
 
     textField: {
@@ -48,6 +50,10 @@ const styles = {
         WebkitUserDrag: "none",
         WebkitUserSelect:"none",
         msUserSelect:"none",
+
+        position: "absolute",
+        // top: "50%",
+        // left: "50%",
       },
 };
 
